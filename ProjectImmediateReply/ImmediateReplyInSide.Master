@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ImmediateReplyInSide.Master.cs" Inherits="ProjectImmediateReply.ImmediateReplayInSide" %>
+
+<%@ Register Src="~/ucLeft.ascx" TagPrefix="uc1" TagName="ucLeft" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- meta引入 -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="zh-tw">
+
+    <!-- ---------- -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.3.10/dist/vuetify.min.css" rel="stylesheet">
+    <!-- 導入中文字體 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+    <!-- 導入英文字體 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap" rel="stylesheet">
+    <link href="assets/css/ImmediateReplaInSide.css" rel="stylesheet" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/ImmediataReply.js"></script>
+    <script src="assets/js/ImmediateReplyAJAX.js"></script>
+    <title></title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.3.10/dist/vuetify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:HiddenField ID="HiddenFieldSessionPri" runat="server" />
+        <asp:HiddenField ID="HiddenFieldSessionMail" runat="server" />
+        <div id="app">
+            <v-app id="inspire">
+				<v-app id="keep">
+					<v-app-bar app clipped-left color="black">
+						<v-app-bar-nav-icon @click="drawer = !drawer" color="white"></v-app-bar-nav-icon>
+						<v-spacer></v-spacer>
+						<span class="title mr-5">
+							<font color="#0069CE" class="ubay">u</font>
+							<font color="#00A65A" class="ubay">B</font>
+							<font color="#EEC803" class="ubay">A</font>
+							<font color="#EC475A" class="ubay">Y</font>
+                            <font color="#FFFFFF" class="text-caption font-weight-bold text-lg-h4 text-xl-h4">專案即時回覆系統</font>
+						</span>
+						<v-spacer></v-spacer>
+					</v-app-bar>
+
+					<!-- 導航欄開始 -->
+					    <uc1:ucLeft runat="server" id="ucLeft" />
+					<!-- 導航欄結束 -->
+
+					 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                     </asp:ContentPlaceHolder>
+					
+                    
+                    <!-- footer -->
+					<v-footer dark padless fixed>
+						<v-card class="flex" flat tile>
+
+							<v-card-text class="py-2 white--text text-center">
+								<p class="flow-text grey-text center footer-ubay">Copyright&copy;2021,
+									<font color="#0069CE">u</font>
+									<font color="#00A65A">B</font>
+									<font color="#EEC803">A</font>
+									<font color="#EC475A">Y</font> All Rights Reserved
+								</p>
+							</v-card-text>
+						</v-card>
+					</v-footer>
+				</v-app>
+			</v-app>
+        </div>
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

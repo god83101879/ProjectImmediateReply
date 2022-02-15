@@ -1,0 +1,45 @@
+﻿#keep .v-navigation-drawer__border {
+    display: none
+}
+
+.ubay {
+    font-family: 'Lemonada', cursive;
+    font-weight: 900;
+    font-size: 3.125rem;
+    padding-left: 0.9375rem;
+    margin-left: -0.3125rem;
+}
+
+.navfont {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-weight: bold;
+}
+
+.footer-ubay {
+    font-family: 'Lemonada', cursive !important;
+}
+
+.top {
+    background: rgba(0, 0, 0, .6) !important;
+}
+
+.chinese {
+    font-family: 'Noto Sans TC', sans-serif;
+    padding-right: 2.375rem;
+}
+
+
+@media (max-width:600px), print {
+    .ubay {
+        font-size: 2.125rem;
+        padding: 0.125rem
+    }
+
+    .footer-ubay {
+        font-family: 'Anton', sans-serif;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 1rem;
+    }
+}
+
+

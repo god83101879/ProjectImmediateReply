@@ -1,0 +1,433 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0C9E207-FF74-4BC6-A0E9-E2BF5BD2B4F5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectImmediateReply</RootNamespace>
+    <AssemblyName>ProjectImmediateReply</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44362</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\ImmediateReplaInSide.css" />
+    <Content Include="assets\css\ImmediateReplayMain.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\W3HWStyle.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\js\ImmediataReply.js" />
+    <Content Include="assets\js\ImmediateReplyAJAX.js" />
+    <Content Include="assets\js\jquery-3.6.0.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.scrollex.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\skel.min.js" />
+    <Content Include="assets\js\util.js" />
+    <Content Include="ClassDetail.aspx" />
+    <Content Include="CreateSpecialAccount.aspx" />
+    <Content Include="CreateWorks.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HTML\A-1.html" />
+    <Content Include="HTML\A-2-1.html" />
+    <Content Include="HTML\A-2.html" />
+    <Content Include="HTML\A-3.html" />
+    <Content Include="HTML\B-1.html" />
+    <Content Include="HTML\B-2.html" />
+    <Content Include="HTML\B-3.html" />
+    <Content Include="HTML\B-4.html" />
+    <Content Include="HTML\B3-1.html" />
+    <Content Include="HTML\B3-2.html" />
+    <Content Include="HTML\C.html" />
+    <Content Include="HTML\C1-1.html" />
+    <Content Include="HTML\C1.html" />
+    <Content Include="HTML\C2.html" />
+    <Content Include="HTML\C3-1.html" />
+    <Content Include="HTML\C3.html" />
+    <Content Include="HTML\C4.html" />
+    <Content Include="HTML\login.html" />
+    <Content Include="HTML\vuetify-test.html" />
+    <Content Include="HTML\vuetify-test1.html" />
+    <Content Include="images\002.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\geoglo.png" />
+    <Content Include="images\pic01.jpg" />
+    <Content Include="images\pic02.jpg" />
+    <Content Include="images\pic03.jpg" />
+    <Content Include="images\pic04.jpg" />
+    <Content Include="images\slide01.jpg" />
+    <Content Include="images\slide02.jpg" />
+    <Content Include="images\slide03.jpg" />
+    <Content Include="images\slide04.jpg" />
+    <Content Include="images\slide05.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="ManageProject.aspx" />
+    <Content Include="ProjectDetail.aspx" />
+    <Content Include="ProjectDetail_Grades.aspx" />
+    <Content Include="ucAssignTeam.ascx" />
+    <Content Include="ucCreateClass.ascx" />
+    <Content Include="ucCreateProject.ascx" />
+    <Content Include="ucCrud.ascx" />
+    <Content Include="ucForgetpassword.ascx" />
+    <Content Include="ucRegistered.ascx" />
+    <Content Include="ucSeeGrade.ascx" />
+    <Content Include="ucUpdateInfo.ascx" />
+    <Content Include="LogIn.aspx" />
+    <Content Include="ucLeft.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\AssignTeamHandler.ashx.cs">
+      <DependentUpon>AssignTeamHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\ClassDetailHandler.ashx.cs">
+      <DependentUpon>ClassDetailHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\CreateClassHandler.ashx.cs">
+      <DependentUpon>CreateClassHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\CreateProjectHandler.ashx.cs">
+      <DependentUpon>CreateProjectHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\CreateSpecialAccountHandler.ashx.cs">
+      <DependentUpon>CreateSpecialAccountHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\CreateWorkHandler.ashx.cs">
+      <DependentUpon>CreateWorkHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\ForgetPasswordHandeler.ashx.cs">
+      <DependentUpon>ForgetPasswordHandeler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\GetCrudHandler.ashx.cs">
+      <DependentUpon>GetCrudHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\GetFileHandler.ashx.cs">
+      <DependentUpon>GetFileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\ManageProject_LeaderCheckHandler.ashx.cs">
+      <DependentUpon>ManageProject_LeaderCheckHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\ProjectDetailHandler.ashx.cs">
+      <DependentUpon>ProjectDetailHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\ProjectDetail_GradesHandler.ashx.cs">
+      <DependentUpon>ProjectDetail_GradesHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\RegisteredHandler.ashx.cs">
+      <DependentUpon>RegisteredHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\UpdateInfoHandler.ashx.cs">
+      <DependentUpon>UpdateInfoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\SeeGradeHandler.ashx.cs">
+      <DependentUpon>SeeGradeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDetail.aspx.cs">
+      <DependentUpon>ClassDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassDetail.aspx.designer.cs">
+      <DependentUpon>ClassDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateSpecialAccount.aspx.cs">
+      <DependentUpon>CreateSpecialAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateSpecialAccount.aspx.designer.cs">
+      <DependentUpon>CreateSpecialAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateWorks.aspx.cs">
+      <DependentUpon>CreateWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateWorks.aspx.designer.cs">
+      <DependentUpon>CreateWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImmediateReply.Master.cs">
+      <DependentUpon>ImmediateReply.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImmediateReply.Master.designer.cs">
+      <DependentUpon>ImmediateReply.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ImmediateReplyInSide.Master.cs">
+      <DependentUpon>ImmediateReplyInSide.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImmediateReplyInSide.Master.designer.cs">
+      <DependentUpon>ImmediateReplyInSide.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProject.aspx.cs">
+      <DependentUpon>ManageProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageProject.aspx.designer.cs">
+      <DependentUpon>ManageProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDetail.aspx.cs">
+      <DependentUpon>ProjectDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectDetail.aspx.designer.cs">
+      <DependentUpon>ProjectDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDetail_Grades.aspx.cs">
+      <DependentUpon>ProjectDetail_Grades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectDetail_Grades.aspx.designer.cs">
+      <DependentUpon>ProjectDetail_Grades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ucAssignTeam.ascx.cs">
+      <DependentUpon>ucAssignTeam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucAssignTeam.ascx.designer.cs">
+      <DependentUpon>ucAssignTeam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucCreateProject.ascx.cs">
+      <DependentUpon>ucCreateProject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucCreateProject.ascx.designer.cs">
+      <DependentUpon>ucCreateProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucSeeGrade.ascx.cs">
+      <DependentUpon>ucSeeGrade.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucSeeGrade.ascx.designer.cs">
+      <DependentUpon>ucSeeGrade.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DBModelTool.cs" />
+    <Compile Include="Utility\MailTool.cs" />
+    <Compile Include="Utility\PageTool.cs" />
+    <Compile Include="Utility\SortTool.cs" />
+    <Compile Include="ViewModels\ForAssignTeam.cs" />
+    <Compile Include="ViewModels\ForClassDetail.cs" />
+    <Compile Include="ViewModels\ForCreateWorks.cs" />
+    <Compile Include="ViewModels\ForGradesShow.cs" />
+    <Compile Include="ViewModels\ForManageProject.cs" />
+    <Compile Include="ViewModels\ForProjectDetail.cs" />
+    <Compile Include="ViewModels\ForProjectDetail_Grades.cs" />
+    <Compile Include="ViewModels\ForSeeGrade.cs" />
+    <Compile Include="WriteLog\txtLog.cs" />
+    <Compile Include="Models\GradeInfo.cs" />
+    <Compile Include="Models\LogInfo.cs" />
+    <Compile Include="Models\ProjectInfo.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\WorkInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucCreateClass.ascx.cs">
+      <DependentUpon>ucCreateClass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucCreateClass.ascx.designer.cs">
+      <DependentUpon>ucCreateClass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucCrud.ascx.cs">
+      <DependentUpon>ucCrud.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucCrud.ascx.designer.cs">
+      <DependentUpon>ucCrud.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucForgetpassword.ascx.cs">
+      <DependentUpon>ucForgetpassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucForgetpassword.ascx.designer.cs">
+      <DependentUpon>ucForgetpassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucRegistered.ascx.cs">
+      <DependentUpon>ucRegistered.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucRegistered.ascx.designer.cs">
+      <DependentUpon>ucRegistered.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ucUpdateInfo.ascx.cs">
+      <DependentUpon>ucUpdateInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucUpdateInfo.ascx.designer.cs">
+      <DependentUpon>ucUpdateInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DBTool.cs" />
+    <Compile Include="Utility\LoginHelper.cs" />
+    <Compile Include="Utility\RandomTool.cs" />
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ucLeft.ascx.cs">
+      <DependentUpon>ucLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucLeft.ascx.designer.cs">
+      <DependentUpon>ucLeft.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="ImmediateReply.Master" />
+    <Content Include="ImmediateReplyInSide.Master" />
+    <Content Include="API\CreateClassHandler.ashx" />
+    <Content Include="API\RegisteredHandler.ashx" />
+    <Content Include="API\ForgetPasswordHandeler.ashx" />
+    <Content Include="API\GetCrudHandler.ashx" />
+    <Content Include="API\CreateProjectHandler.ashx" />
+    <Content Include="API\UpdateInfoHandler.ashx" />
+    <Content Include="API\SeeGradeHandler.ashx" />
+    <Content Include="API\GetFileHandler.ashx" />
+    <Content Include="API\AssignTeamHandler.ashx" />
+    <Content Include="API\ProjectDetailHandler.ashx" />
+    <Content Include="API\ClassDetailHandler.ashx" />
+    <Content Include="API\CreateSpecialAccountHandler.ashx" />
+    <Content Include="API\ProjectDetail_GradesHandler.ashx" />
+    <Content Include="API\ManageProject_LeaderCheckHandler.ashx" />
+    <Content Include="API\CreateWorkHandler.ashx" />
+    <None Include="packages.config" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FileUpload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53363</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44362/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
+    <ItemGroup>
+      <RoslynFiles Include="$(CscToolPath)\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
+    <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
+  </Target>
+  -->
+</Project>
